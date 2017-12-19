@@ -3,4 +3,4 @@ solution: EmployeeTimeControl/EmployeeTimeControl.sln
 mono:
   - latest
 install:
-  - nuget EmployeeTimeControl/EmployeeTimeControl.sln
+  - nuget restore EmployeeTimeControl/EmployeeTimeControl.sln

@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using EmployeeTimeControl.Data.Models;
+using Xunit;
 
 namespace EmployeeTimeControl.Data.Test
 {
@@ -8,6 +9,15 @@ namespace EmployeeTimeControl.Data.Test
         public void PassingTest()
         {
             Assert.Equal(4, 2 + 2);
+        }
+
+        [Fact]
+        public void PassingTest2()
+        {
+            Employee e = new Employee();
+            e.FirstName = "Name";
+
+            Assert.Equal(e.FirstName, "Name");
         }
     }
 }

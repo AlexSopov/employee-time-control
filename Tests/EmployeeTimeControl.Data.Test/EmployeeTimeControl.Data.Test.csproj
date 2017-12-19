@@ -79,6 +79,12 @@
   <ItemGroup>
     <Analyzer Include="..\..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Project\EmployeeTimeControl.Data\EmployeeTimeControl.Data.csproj">
+      <Project>{74411317-6348-4761-BC3A-4541FCDB3B50}</Project>
+      <Name>EmployeeTimeControl.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

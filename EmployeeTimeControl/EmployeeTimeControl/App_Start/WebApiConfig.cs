@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace EmployeeTimeControl
 {
@@ -19,6 +16,8 @@ namespace EmployeeTimeControl
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }

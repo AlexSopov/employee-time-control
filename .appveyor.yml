@@ -3,7 +3,7 @@ before_build:
 build_script:
  - msbuild /verbosity:quiet EmployeeTimeControl.sln
 test_script:
- - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:"Tests\EmployeeTimeControl.Data.Test\bin\Debug\EmployeeTimeControl.Tests.dll -noshadow" -output:"coverage.xml"
+ - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:"Tests\EmployeeTimeControl.Data.Test\bin\Debug\EmployeeTimeControl.Test.dll -noshadow" -output:"coverage.xml"
 after_test:
   - ps: |
       $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH

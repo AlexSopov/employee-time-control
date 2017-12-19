@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F375FD85
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeTimeControl.Data", "Project\EmployeeTimeControl.Data\EmployeeTimeControl.Data.csproj", "{74411317-6348-4761-BC3A-4541FCDB3B50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeTimeControl.Data.Tests", "EmployeeTimeControl.Data.Tests\EmployeeTimeControl.Data.Tests.csproj", "{795A4C4B-4A91-43D1-9C2E-3161B95C1AAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeTimeControl.Data.Test", "Tests\EmployeeTimeControl.Data.Test\EmployeeTimeControl.Data.Test.csproj", "{1CACD353-D772-440F-8942-515DB6459396}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,10 @@ Global
 		{74411317-6348-4761-BC3A-4541FCDB3B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74411317-6348-4761-BC3A-4541FCDB3B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74411317-6348-4761-BC3A-4541FCDB3B50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{795A4C4B-4A91-43D1-9C2E-3161B95C1AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{795A4C4B-4A91-43D1-9C2E-3161B95C1AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{795A4C4B-4A91-43D1-9C2E-3161B95C1AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{795A4C4B-4A91-43D1-9C2E-3161B95C1AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CACD353-D772-440F-8942-515DB6459396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CACD353-D772-440F-8942-515DB6459396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CACD353-D772-440F-8942-515DB6459396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CACD353-D772-440F-8942-515DB6459396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FD54A41B-C5F3-4853-A75C-65AA1E254B0C} = {36D5099F-307F-4F07-A671-AB9B165DF017}
 		{74411317-6348-4761-BC3A-4541FCDB3B50} = {36D5099F-307F-4F07-A671-AB9B165DF017}
-		{795A4C4B-4A91-43D1-9C2E-3161B95C1AAC} = {F375FD85-21F7-41F5-BCDA-71099A82D62E}
+		{1CACD353-D772-440F-8942-515DB6459396} = {F375FD85-21F7-41F5-BCDA-71099A82D62E}
 	EndGlobalSection
 EndGlobal

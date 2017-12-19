@@ -1,6 +1,0 @@
-language: csharp
-solution: EmployeeTimeControl/EmployeeTimeControl.sln
-mono:
-  - latest
-install:
-  - nuget restore EmployeeTimeControl/EmployeeTimeControl.sln

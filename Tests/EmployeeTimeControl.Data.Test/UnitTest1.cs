@@ -1,15 +1,14 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EmployeeTimeControl.Tests
+namespace EmployeeTimeControl.Data.Test
 {
     [TestClass]
-    public class InitialTest
+    public class UnitTest1
     {
         [TestMethod]
         public void TestMethod1()
         {
-            // Fake stub
             Assert.IsTrue(true);
         }
     }

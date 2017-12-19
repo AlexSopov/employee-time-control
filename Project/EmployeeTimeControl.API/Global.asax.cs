@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace EmployeeTimeControl
+namespace EmployeeTimeControl.API
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

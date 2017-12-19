@@ -1,7 +1,7 @@
 ﻿using EmployeeTimeControl.Data.Models;
 using System.Data.Entity;
 
-namespace EmployeeTimeControl.Data
+namespace EmployeeTimeControl.Data.AccessLayer
 {
     public class EmployeeTimeControlDataContext : DbContext
     {

@@ -9,10 +9,10 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using EmployeeTimeControl.Data;
+using EmployeeTimeControl.Data.AccessLayer;
 using EmployeeTimeControl.Data.Models;
 
-namespace EmployeeTimeControl.Controllers
+namespace EmployeeTimeControl.API.Controllers
 {
     public class EmployeesController : ApiController
     {

@@ -1,2 +1,6 @@
 language: csharp
 solution: EmployeeTimeControl/EmployeeTimeControl.sln
+mono:
+  - latest
+install:
+  - nuget EmployeeTimeControl/EmployeeTimeControl.sln

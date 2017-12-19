@@ -1,4 +1,4 @@
-     before_build:
+before_build:
  - nuget restore
 build_script:
  - msbuild EmployeeTimeControl.sln

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeTimeControl.Data", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeTimeControl.Data.Test", "Tests\EmployeeTimeControl.Data.Test\EmployeeTimeControl.Data.Test.csproj", "{1CACD353-D772-440F-8942-515DB6459396}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeTimeControl.API.Test", "Tests\EmployeeTimeControl.API.Test\EmployeeTimeControl.API.Test.csproj", "{BF938A3E-05E1-49AD-A4C3-6BF33B9DF811}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{1CACD353-D772-440F-8942-515DB6459396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CACD353-D772-440F-8942-515DB6459396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CACD353-D772-440F-8942-515DB6459396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF938A3E-05E1-49AD-A4C3-6BF33B9DF811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF938A3E-05E1-49AD-A4C3-6BF33B9DF811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF938A3E-05E1-49AD-A4C3-6BF33B9DF811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF938A3E-05E1-49AD-A4C3-6BF33B9DF811}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +45,6 @@ Global
 		{FD54A41B-C5F3-4853-A75C-65AA1E254B0C} = {36D5099F-307F-4F07-A671-AB9B165DF017}
 		{74411317-6348-4761-BC3A-4541FCDB3B50} = {36D5099F-307F-4F07-A671-AB9B165DF017}
 		{1CACD353-D772-440F-8942-515DB6459396} = {F375FD85-21F7-41F5-BCDA-71099A82D62E}
+		{BF938A3E-05E1-49AD-A4C3-6BF33B9DF811} = {F375FD85-21F7-41F5-BCDA-71099A82D62E}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,5 @@
-﻿using EmployeeTimeControl.Data.Models;
+﻿using EmployeeTimeControl.Data.AccessLayer;
+using EmployeeTimeControl.Data.Models;
 using Xunit;
 
 namespace EmployeeTimeControl.Data.Test
@@ -17,7 +18,16 @@ namespace EmployeeTimeControl.Data.Test
             Employee e = new Employee();
             e.FirstName = "Name";
 
-            Assert.Equal(e.FirstName, "Name");
+            Assert.Equal("Name", e.FirstName);
+        }
+
+        [Fact]
+        public void UWTest()
+        {
+            UnitOfWork unit = new UnitOfWork();
+
+            unit.ToString();
+            Assert.NotNull(unit);
         }
     }
 }

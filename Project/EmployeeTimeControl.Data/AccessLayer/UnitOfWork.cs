@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeTimeControl.Data.AccessLayer
 {
-    class UnitOfWork : IDisposable
+    public class UnitOfWork : IDisposable
     {
         EmployeeTimeControlDataContext employeeTimeControlDataContext;
 

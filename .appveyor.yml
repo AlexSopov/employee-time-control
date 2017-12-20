@@ -5,7 +5,4 @@ build_script:
 test_script:
  - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.3.1\tools\net452\xunit.console.x86.exe" -targetargs:"Tests\EmployeeTimeControl.Data.Test\bin\Debug\EmployeeTimeControl.Data.Test.dll" -output:"coverage.xml"
 after_test:
-  - ps: |
-      $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
-      Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
-      bash codecov.sh -f "coverage.xml"
+ - .\packages\Codecov.1.0.3\tools\codecov.exe -f "coverage.xml"

@@ -1,5 +1,6 @@
 ﻿using EmployeeTimeControl.Data.AccessLayer;
 using EmployeeTimeControl.Data.Models;
+using System;
 using Xunit;
 
 namespace EmployeeTimeControl.Data.Test
@@ -9,7 +10,25 @@ namespace EmployeeTimeControl.Data.Test
         [Fact]
         public void PassingTest()
         {
-            Assert.Equal(4, 2 + 2);
+            using (EmployeeTimeControlDataContext db = new EmployeeTimeControlDataContext())
+            {
+                var employees = db.EmployeeSet;
+                employees.Add(new Employee() { FirstName = "1", SecondName = "2", JobTitle = "3" });
+                db.SaveChanges();
+
+                foreach (var b in employees)
+                {
+                    Console.WriteLine(b);
+                }
+
+                var c = db.CardSet;
+                foreach (var d in c)
+                {
+                    Console.WriteLine(d);
+                }
+
+                var emp = db.EmployeeSet.Find(1);
+            }
         }
 
         [Fact]

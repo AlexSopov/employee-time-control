@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EmployeeTimeControl.Data.Models;
+using System;
 
 namespace EmployeeTimeControl.Data.AccessLayer
 {
@@ -13,6 +10,14 @@ namespace EmployeeTimeControl.Data.AccessLayer
         public UnitOfWork()
         {
             this.employeeTimeControlDataContext = new EmployeeTimeControlDataContext();
+        }
+
+        public DataRepository<Employee> Employees
+        {
+            get
+            {
+                return new DataRepository<Employee>(employeeTimeControlDataContext);
+            }
         }
 
         #region IDisposable Support

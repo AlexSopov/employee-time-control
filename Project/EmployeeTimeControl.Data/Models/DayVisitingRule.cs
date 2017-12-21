@@ -11,6 +11,7 @@ namespace EmployeeTimeControl.Data.Models
         public DateTimeOffset StartWorkingDay { get; set; }
         public DateTimeOffset EndWorkingDay { get; set; }
         public int DayNormal { get; set; }
+        public DayOfWeek DayOfWeek { get; set; }
 
         // Navigation properties
         [JsonIgnore]

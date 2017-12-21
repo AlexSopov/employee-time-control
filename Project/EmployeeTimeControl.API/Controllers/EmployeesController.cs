@@ -6,7 +6,6 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using EmployeeTimeControl.Data.AccessLayer;
@@ -26,9 +25,9 @@ namespace EmployeeTimeControl.API.Controllers
 
         // GET: api/Employees/5
         [ResponseType(typeof(Employee))]
-        public async Task<IHttpActionResult> GetEmployee(int id)
+        public IHttpActionResult GetEmployee(int id)
         {
-            Employee employee = await db.EmployeeSet.FindAsync(id);
+            Employee employee = db.EmployeeSet.Find(id);
             if (employee == null)
             {
                 return NotFound();
@@ -39,7 +38,7 @@ namespace EmployeeTimeControl.API.Controllers
 
         // PUT: api/Employees/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutEmployee(int id, Employee employee)
+        public IHttpActionResult PutEmployee(int id, Employee employee)
         {
             if (!ModelState.IsValid)
             {
@@ -55,7 +54,7 @@ namespace EmployeeTimeControl.API.Controllers
 
             try
             {
-                await db.SaveChangesAsync();
+                db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -74,7 +73,7 @@ namespace EmployeeTimeControl.API.Controllers
 
         // POST: api/Employees
         [ResponseType(typeof(Employee))]
-        public async Task<IHttpActionResult> PostEmployee(Employee employee)
+        public IHttpActionResult PostEmployee(Employee employee)
         {
             if (!ModelState.IsValid)
             {
@@ -82,23 +81,23 @@ namespace EmployeeTimeControl.API.Controllers
             }
 
             db.EmployeeSet.Add(employee);
-            await db.SaveChangesAsync();
+            db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = employee.EmployeeId }, employee);
         }
 
         // DELETE: api/Employees/5
         [ResponseType(typeof(Employee))]
-        public async Task<IHttpActionResult> DeleteEmployee(int id)
+        public IHttpActionResult DeleteEmployee(int id)
         {
-            Employee employee = await db.EmployeeSet.FindAsync(id);
+            Employee employee = db.EmployeeSet.Find(id);
             if (employee == null)
             {
                 return NotFound();
             }
 
             db.EmployeeSet.Remove(employee);
-            await db.SaveChangesAsync();
+            db.SaveChanges();
 
             return Ok(employee);
         }

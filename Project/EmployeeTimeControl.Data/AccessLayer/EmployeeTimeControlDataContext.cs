@@ -5,7 +5,7 @@ namespace EmployeeTimeControl.Data.AccessLayer
 {
     public class EmployeeTimeControlDataContext : DbContext
     {
-        public EmployeeTimeControlDataContext() : base("EmployeeTimeControlDataContext")
+        public EmployeeTimeControlDataContext() : base("EmployeeTimeControlSystem")
         {
 
         }
@@ -17,5 +17,6 @@ namespace EmployeeTimeControl.Data.AccessLayer
         public DbSet<Employee> EmployeeSet { get; set; }
         public DbSet<PassagePoint> PassagePointSet { get; set; }
         public DbSet<VisitingRule> VisitingRuleSet { get; set; }
+        public DbSet<DayOff> DayOffSet { get; set; }
     }
 }

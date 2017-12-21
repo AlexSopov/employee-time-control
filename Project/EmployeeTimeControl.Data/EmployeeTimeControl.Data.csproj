@@ -77,9 +77,24 @@
     <Compile Include="AccessLayer\DataRepository.cs" />
     <Compile Include="AccessLayer\EmployeeTimeControlDataContext.cs" />
     <Compile Include="AccessLayer\UnitOfWork.cs" />
+    <Compile Include="Migrations\201712212010035_AddJobTitle.cs" />
+    <Compile Include="Migrations\201712212010035_AddJobTitle.Designer.cs">
+      <DependentUpon>201712212010035_AddJobTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712212026049_AddDayOff.cs" />
+    <Compile Include="Migrations\201712212026049_AddDayOff.Designer.cs">
+      <DependentUpon>201712212026049_AddDayOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712212031140_AddDayOfWeek_OnDayVisitingRule.cs" />
+    <Compile Include="Migrations\201712212031140_AddDayOfWeek_OnDayVisitingRule.Designer.cs">
+      <DependentUpon>201712212031140_AddDayOfWeek_OnDayVisitingRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccessAttemption.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\CardAccess.cs" />
+    <Compile Include="Models\DayOff.cs" />
+    <Compile Include="Models\DayOffType.cs" />
     <Compile Include="Models\DayVisitingRule.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\PassagePoint.cs" />
@@ -92,6 +107,17 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\packages\xunit.analyzers.0.8.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712212010035_AddJobTitle.resx">
+      <DependentUpon>201712212010035_AddJobTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712212026049_AddDayOff.resx">
+      <DependentUpon>201712212026049_AddDayOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712212031140_AddDayOfWeek_OnDayVisitingRule.resx">
+      <DependentUpon>201712212031140_AddDayOfWeek_OnDayVisitingRule.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

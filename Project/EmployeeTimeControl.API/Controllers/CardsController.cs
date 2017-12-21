@@ -13,45 +13,44 @@ using EmployeeTimeControl.Data.Models;
 
 namespace EmployeeTimeControl.API.Controllers
 {
-    public class EmployeesController : ApiController
+    public class CardsController : ApiController
     {
         private EmployeeTimeControlDataContext db = new EmployeeTimeControlDataContext();
 
-        // GET: api/Employees
-        public IQueryable<Employee> GetEmployeeSet()
+        // GET: api/Cards
+        public IQueryable<Card> GetCardSet()
         {
-
-            return db.EmployeeSet;
+            return db.CardSet;
         }
 
-        // GET: api/Employees/5
-        [ResponseType(typeof(Employee))]
-        public IHttpActionResult GetEmployee(int id)
+        // GET: api/Cards/5
+        [ResponseType(typeof(Card))]
+        public IHttpActionResult GetCard(int id)
         {
-            Employee employee = db.EmployeeSet.Find(id);
-            if (employee == null)
+            Card card = db.CardSet.Find(id);
+            if (card == null)
             {
                 return NotFound();
             }
 
-            return Ok(employee);
+            return Ok(card);
         }
 
-        // PUT: api/Employees/5
+        // PUT: api/Cards/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutEmployee(int id, Employee employee)
+        public IHttpActionResult PutCard(int id, Card card)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != employee.EmployeeId)
+            if (id != card.CardId)
             {
                 return BadRequest();
             }
 
-            db.Entry(employee).State = EntityState.Modified;
+            db.Entry(card).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +58,7 @@ namespace EmployeeTimeControl.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EmployeeExists(id))
+                if (!CardExists(id))
                 {
                     return NotFound();
                 }
@@ -72,35 +71,35 @@ namespace EmployeeTimeControl.API.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Employees
-        [ResponseType(typeof(Employee))]
-        public IHttpActionResult PostEmployee(Employee employee)
+        // POST: api/Cards
+        [ResponseType(typeof(Card))]
+        public IHttpActionResult PostCard(Card card)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.EmployeeSet.Add(employee);
+            db.CardSet.Add(card);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = employee.EmployeeId }, employee);
+            return CreatedAtRoute("DefaultApi", new { id = card.CardId }, card);
         }
 
-        // DELETE: api/Employees/5
-        [ResponseType(typeof(Employee))]
-        public IHttpActionResult DeleteEmployee(int id)
+        // DELETE: api/Cards/5
+        [ResponseType(typeof(Card))]
+        public IHttpActionResult DeleteCard(int id)
         {
-            Employee employee = db.EmployeeSet.Find(id);
-            if (employee == null)
+            Card card = db.CardSet.Find(id);
+            if (card == null)
             {
                 return NotFound();
             }
 
-            db.EmployeeSet.Remove(employee);
+            db.CardSet.Remove(card);
             db.SaveChanges();
 
-            return Ok(employee);
+            return Ok(card);
         }
 
         protected override void Dispose(bool disposing)
@@ -112,9 +111,9 @@ namespace EmployeeTimeControl.API.Controllers
             base.Dispose(disposing);
         }
 
-        private bool EmployeeExists(int id)
+        private bool CardExists(int id)
         {
-            return db.EmployeeSet.Count(e => e.EmployeeId == id) > 0;
+            return db.CardSet.Count(e => e.CardId == id) > 0;
         }
     }
 }

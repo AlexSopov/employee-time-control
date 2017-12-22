@@ -4,16 +4,18 @@ namespace EmployeeTimeControl.Data.Migrations
     using Models;
     using System;
     using System.Collections.Generic;
+    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<EmployeeTimeControlDataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EmployeeTimeControl.Data.AccessLayer.EmployeeTimeControlDataContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(EmployeeTimeControlDataContext context)
+        protected override void Seed(EmployeeTimeControl.Data.AccessLayer.EmployeeTimeControlDataContext context)
         {
             #region Init Working Day Standart Rule
 
@@ -133,11 +135,11 @@ namespace EmployeeTimeControl.Data.Migrations
 
             #region Initialize Cards
 
-            Card card1 = new Card() { CardOwner = employee1 };
-            Card card2 = new Card() { CardOwner = employee2 };
-            Card card3 = new Card() { CardOwner = employee3 };
-            Card card4 = new Card() { CardOwner = employee4 };
-            Card card5 = new Card() { CardOwner = employee5 };
+            Card card1 = new Card() { Employee = employee1 };
+            Card card2 = new Card() { Employee = employee2 };
+            Card card3 = new Card() { Employee = employee3 };
+            Card card4 = new Card() { Employee = employee4 };
+            Card card5 = new Card() { Employee = employee5 };
 
             #endregion
 
@@ -175,6 +177,7 @@ namespace EmployeeTimeControl.Data.Migrations
 
             List<Employee> employees = new List<Employee>() { employee1, employee2, employee3, employee4, employee5 };
             List<Card> cards = new List<Card>() { card1, card2, card3, card4, card5 };
+            List<CardAccess> cardAccesses = new List<CardAccess>() { cardAccess1, cardAccess2, cardAccess3, cardAccess4, cardAccess5 };
             List<AccessAttemption> accessAttemptions = new List<AccessAttemption>();
             Random random = new Random();
 
@@ -204,6 +207,7 @@ namespace EmployeeTimeControl.Data.Migrations
             using (EmployeeTimeControlDataContext dataContext = new EmployeeTimeControlDataContext())
             {
                 dataContext.EmployeeSet.AddRange(employees);
+                dataContext.CardAccessSet.AddRange(cardAccesses);
                 dataContext.AccessAttemptionSet.AddRange(accessAttemptions);
 
                 dataContext.SaveChanges();
@@ -211,6 +215,12 @@ namespace EmployeeTimeControl.Data.Migrations
 
 
             #endregion
+
+
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data.
         }
     }
 }

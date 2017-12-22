@@ -11,11 +11,11 @@ namespace EmployeeTimeControl.Data.Models
 
         // Navigation properties
         [JsonIgnore]
-        public virtual ICollection<CardAccess> CardPassagePoints { get; set; }
+        public virtual ICollection<CardAccess> CardAccesses { get; set; }
 
         public PassagePoint()
         {
-            CardPassagePoints = new List<CardAccess>();
+            CardAccesses = new List<CardAccess>();
         }
     }
 }

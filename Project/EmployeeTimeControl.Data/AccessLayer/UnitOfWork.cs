@@ -20,6 +20,22 @@ namespace EmployeeTimeControl.Data.AccessLayer
             }
         }
 
+        public DataRepository<AccessAttemption> AccessAttemptions
+        {
+            get
+            {
+                return new DataRepository<AccessAttemption>(employeeTimeControlDataContext);
+            }
+        }
+
+        public DataRepository<Card> Cards
+        {
+            get
+            {
+                return new DataRepository<Card>(employeeTimeControlDataContext);
+            }
+        }
+
         #region IDisposable Support
 
         private bool disposedValue = false;

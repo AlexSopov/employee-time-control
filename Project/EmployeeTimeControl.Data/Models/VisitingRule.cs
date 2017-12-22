@@ -12,10 +12,13 @@ namespace EmployeeTimeControl.Data.Models
         // Navigation properties
         [JsonIgnore]
         public virtual ICollection<DayVisitingRule> DayRules { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Employee> Employees { get; set; }
 
         public VisitingRule()
         {
             DayRules = new List<DayVisitingRule>();
+            Employees = new List<Employee>();
         }
     }
 }

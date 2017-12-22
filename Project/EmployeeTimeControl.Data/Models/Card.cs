@@ -7,11 +7,11 @@ namespace EmployeeTimeControl.Data.Models
     {
         // Data properties
         public int CardId { get; set; }
-        public int CardOwnerId { get; set; }
+        public int EmployeeId { get; set; }
 
         // Navigation properties
         [JsonIgnore]
-        public virtual Employee CardOwner { get; set; }
+        public virtual Employee Employee { get; set; }
         [JsonIgnore]
         public virtual ICollection<CardAccess> CardPassagePoints { get; set; }
 

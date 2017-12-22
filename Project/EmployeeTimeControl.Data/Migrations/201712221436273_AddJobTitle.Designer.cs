@@ -13,7 +13,7 @@ namespace EmployeeTimeControl.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201712212010035_AddJobTitle"; }
+            get { return "201712221436273_AddJobTitle"; }
         }
         
         string IMigrationMetadata.Source

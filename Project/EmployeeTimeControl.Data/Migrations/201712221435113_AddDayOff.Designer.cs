@@ -7,13 +7,13 @@ namespace EmployeeTimeControl.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddDayOfWeek_OnDayVisitingRule : IMigrationMetadata
+    public sealed partial class AddDayOff : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddDayOfWeek_OnDayVisitingRule));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddDayOff));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712212031140_AddDayOfWeek_OnDayVisitingRule"; }
+            get { return "201712221435113_AddDayOff"; }
         }
         
         string IMigrationMetadata.Source

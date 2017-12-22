@@ -9,6 +9,7 @@ namespace EmployeeTimeControl.Data.Models
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
+        public int VisitingRuleId { get; set; }
         public string JobTitle { get; set; }
 
         // Navigation properties

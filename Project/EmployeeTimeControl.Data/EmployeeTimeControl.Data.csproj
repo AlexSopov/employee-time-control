@@ -77,17 +77,17 @@
     <Compile Include="AccessLayer\DataRepository.cs" />
     <Compile Include="AccessLayer\EmployeeTimeControlDataContext.cs" />
     <Compile Include="AccessLayer\UnitOfWork.cs" />
-    <Compile Include="Migrations\201712212010035_AddJobTitle.cs" />
-    <Compile Include="Migrations\201712212010035_AddJobTitle.Designer.cs">
-      <DependentUpon>201712212010035_AddJobTitle.cs</DependentUpon>
+    <Compile Include="Migrations\201712221431039_Initial.cs" />
+    <Compile Include="Migrations\201712221431039_Initial.Designer.cs">
+      <DependentUpon>201712221431039_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712212026049_AddDayOff.cs" />
-    <Compile Include="Migrations\201712212026049_AddDayOff.Designer.cs">
-      <DependentUpon>201712212026049_AddDayOff.cs</DependentUpon>
+    <Compile Include="Migrations\201712221435113_AddDayOff.cs" />
+    <Compile Include="Migrations\201712221435113_AddDayOff.Designer.cs">
+      <DependentUpon>201712221435113_AddDayOff.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712212031140_AddDayOfWeek_OnDayVisitingRule.cs" />
-    <Compile Include="Migrations\201712212031140_AddDayOfWeek_OnDayVisitingRule.Designer.cs">
-      <DependentUpon>201712212031140_AddDayOfWeek_OnDayVisitingRule.cs</DependentUpon>
+    <Compile Include="Migrations\201712221436273_AddJobTitle.cs" />
+    <Compile Include="Migrations\201712221436273_AddJobTitle.Designer.cs">
+      <DependentUpon>201712221436273_AddJobTitle.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccessAttemption.cs" />
@@ -109,14 +109,14 @@
     <Analyzer Include="..\..\packages\xunit.analyzers.0.8.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712212010035_AddJobTitle.resx">
-      <DependentUpon>201712212010035_AddJobTitle.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712221431039_Initial.resx">
+      <DependentUpon>201712221431039_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712212026049_AddDayOff.resx">
-      <DependentUpon>201712212026049_AddDayOff.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712221435113_AddDayOff.resx">
+      <DependentUpon>201712221435113_AddDayOff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712212031140_AddDayOfWeek_OnDayVisitingRule.resx">
-      <DependentUpon>201712212031140_AddDayOfWeek_OnDayVisitingRule.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712221436273_AddJobTitle.resx">
+      <DependentUpon>201712221436273_AddJobTitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

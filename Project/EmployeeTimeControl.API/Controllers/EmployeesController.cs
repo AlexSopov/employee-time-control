@@ -10,18 +10,29 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using EmployeeTimeControl.Data.AccessLayer;
 using EmployeeTimeControl.Data.Models;
+using System.Data.SqlClient;
 
 namespace EmployeeTimeControl.API.Controllers
 {
     public class EmployeesController : ApiController
     {
         private EmployeeTimeControlDataContext db = new EmployeeTimeControlDataContext();
+        private UnitOfWork unitOfWork = new UnitOfWork();
 
         // GET: api/Employees
         public IQueryable<Employee> GetEmployeeSet()
         {
 
             return db.EmployeeSet;
+        }
+
+        [Route("api/Employees/{id}/AccessHistory")]
+        public IEnumerable<AccessAttemption> GetAccessHistory(int id)
+        {
+            return db.AccessAttemptionSet.SqlQuery(
+                "SELECT * FROM AccessAttemptions AS aas WHERE aas.CardId IN" + 
+                "(SELECT Cards.CardId FROM Cards WHERE Cards.EmployeeId = @id); ", 
+                new SqlParameter("@id", id));
         }
 
         // GET: api/Employees/5

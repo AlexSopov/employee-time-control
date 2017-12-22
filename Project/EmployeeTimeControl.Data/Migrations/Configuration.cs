@@ -25,36 +25,36 @@ namespace EmployeeTimeControl.Data.Migrations
             {
                 DayOfWeek = DayOfWeek.Monday,
                 DayNormal = 8,
-                StartWorkingDay = new DateTime(2000, 1, 1, 9, 0, 0),
-                EndWorkingDay = new DateTime(2000, 1, 1, 17, 0, 0)
+                StartWorkingDay = new TimeSpan(9, 0, 0),
+                EndWorkingDay = new TimeSpan(17, 0, 0)
             });
             visitingRuleEveryWorkDay.DayRules.Add(new DayVisitingRule()
             {
                 DayOfWeek = DayOfWeek.Tuesday,
                 DayNormal = 8,
-                StartWorkingDay = new DateTime(2000, 1, 1, 9, 0, 0),
-                EndWorkingDay = new DateTime(2000, 1, 1, 17, 0, 0)
+                StartWorkingDay = new TimeSpan(9, 0, 0),
+                EndWorkingDay = new TimeSpan(17, 0, 0)
             });
             visitingRuleEveryWorkDay.DayRules.Add(new DayVisitingRule()
             {
                 DayOfWeek = DayOfWeek.Wednesday,
                 DayNormal = 8,
-                StartWorkingDay = new DateTime(2000, 1, 1, 9, 0, 0),
-                EndWorkingDay = new DateTime(2000, 1, 1, 17, 0, 0)
+                StartWorkingDay = new TimeSpan(9, 0, 0),
+                EndWorkingDay = new TimeSpan(17, 0, 0)
             });
             visitingRuleEveryWorkDay.DayRules.Add(new DayVisitingRule()
             {
                 DayOfWeek = DayOfWeek.Thursday,
                 DayNormal = 8,
-                StartWorkingDay = new DateTime(2000, 1, 1, 9, 0, 0),
-                EndWorkingDay = new DateTime(2000, 1, 1, 17, 0, 0)
+                StartWorkingDay = new TimeSpan(9, 0, 0),
+                EndWorkingDay = new TimeSpan(17, 0, 0)
             });
             visitingRuleEveryWorkDay.DayRules.Add(new DayVisitingRule()
             {
                 DayOfWeek = DayOfWeek.Friday,
                 DayNormal = 8,
-                StartWorkingDay = new DateTime(2000, 1, 1, 9, 0, 0),
-                EndWorkingDay = new DateTime(2000, 1, 1, 17, 0, 0)
+                StartWorkingDay = new TimeSpan(9, 0, 0),
+                EndWorkingDay = new TimeSpan(17, 0, 0)
             });
 
             #endregion
@@ -67,15 +67,15 @@ namespace EmployeeTimeControl.Data.Migrations
             {
                 DayOfWeek = DayOfWeek.Saturday,
                 DayNormal = 5,
-                StartWorkingDay = new DateTime(2000, 1, 1, 12, 0, 0),
-                EndWorkingDay = new DateTime(2000, 1, 1, 17, 0, 0)
+                StartWorkingDay = new TimeSpan(12, 0, 0),
+                EndWorkingDay = new TimeSpan(17, 0, 0)
             });
             visitingRuleWeekends.DayRules.Add(new DayVisitingRule()
             {
                 DayOfWeek = DayOfWeek.Sunday,
                 DayNormal = 8,
-                StartWorkingDay = new DateTime(2000, 1, 1, 12, 0, 0),
-                EndWorkingDay = new DateTime(2000, 1, 1, 17, 0, 0)
+                StartWorkingDay = new TimeSpan(12, 0, 0),
+                EndWorkingDay = new TimeSpan(17, 0, 0)
             });
 
             #endregion
@@ -206,9 +206,10 @@ namespace EmployeeTimeControl.Data.Migrations
 
             using (EmployeeTimeControlDataContext dataContext = new EmployeeTimeControlDataContext())
             {
-                dataContext.EmployeeSet.AddRange(employees);
-                dataContext.CardAccessSet.AddRange(cardAccesses);
-                dataContext.AccessAttemptionSet.AddRange(accessAttemptions);
+
+                dataContext.EmployeeSet.AddOrUpdate(employees.ToArray());
+                dataContext.CardAccessSet.AddOrUpdate(cardAccesses.ToArray());
+                dataContext.AccessAttemptionSet.AddOrUpdate(accessAttemptions.ToArray());
 
                 dataContext.SaveChanges();
             }

@@ -8,8 +8,8 @@ namespace EmployeeTimeControl.Data.Models
         // Data properties
         public int DayVisitingRuleId { get; set; }
         public int VisitingRuleId { get; set; }
-        public DateTime StartWorkingDay { get; set; }
-        public DateTime EndWorkingDay { get; set; }
+        public TimeSpan StartWorkingDay { get; set; }
+        public TimeSpan EndWorkingDay { get; set; }
         public int DayNormal { get; set; }
         public DayOfWeek DayOfWeek { get; set; }
 

@@ -188,7 +188,7 @@ namespace EmployeeTimeControl.Data.Migrations
                 {
                     Card = cards[i % 5],
                     PassagePoint = passingPoint1,
-                    AttemptionTime = new DateTime(2017, 11, 2 + i % 5, 9 + random.Next(-2, 2), 0, 0),
+                    AttemptionTime = new DateTime(2017, 11, 6 + i % 5, 9 + random.Next(-2, 3), 0, 0),
                     SuccessStatus = true,
                     IsEnter = true
                 });
@@ -198,7 +198,7 @@ namespace EmployeeTimeControl.Data.Migrations
                 {
                     Card = cards[i % 5],
                     PassagePoint = passingPoint1,
-                    AttemptionTime = new DateTime(2017, 11, 2 + i % 5, 17 + random.Next(-2, 2), 0, 0),
+                    AttemptionTime = new DateTime(2017, 11, 6 + i % 5, 17 + random.Next(-2, 3), 0, 0),
                     SuccessStatus = true,
                     IsEnter = false
                 });

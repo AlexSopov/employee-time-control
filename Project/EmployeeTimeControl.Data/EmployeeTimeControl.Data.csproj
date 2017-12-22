@@ -93,6 +93,10 @@
     <Compile Include="Migrations\201712221441461_ChangeTypeToTimeOnDayVisitingRule.Designer.cs">
       <DependentUpon>201712221441461_ChangeTypeToTimeOnDayVisitingRule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712221523478_AddEmployeeToDayOff.cs" />
+    <Compile Include="Migrations\201712221523478_AddEmployeeToDayOff.Designer.cs">
+      <DependentUpon>201712221523478_AddEmployeeToDayOff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccessAttemption.cs" />
     <Compile Include="Models\Card.cs" />
@@ -124,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712221441461_ChangeTypeToTimeOnDayVisitingRule.resx">
       <DependentUpon>201712221441461_ChangeTypeToTimeOnDayVisitingRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712221523478_AddEmployeeToDayOff.resx">
+      <DependentUpon>201712221523478_AddEmployeeToDayOff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

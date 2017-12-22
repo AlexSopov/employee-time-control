@@ -17,8 +17,7 @@ namespace EmployeeTimeControl.API.Controllers
     public class EmployeesController : ApiController
     {
         private EmployeeTimeControlDataContext db = new EmployeeTimeControlDataContext();
-        private UnitOfWork unitOfWork = new UnitOfWork();
-
+        
         // GET: api/Employees
         public IQueryable<Employee> GetEmployeeSet()
         {

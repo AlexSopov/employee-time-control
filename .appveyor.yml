@@ -1,3 +1,5 @@
+services:
+  - mssql2014
 before_build:
  - nuget restore
 build_script:

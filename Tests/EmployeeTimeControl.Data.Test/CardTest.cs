@@ -27,7 +27,6 @@ namespace EmployeeTimeControl.Data.Test
             Assert.NotNull(card);
             Assert.NotNull(card.Employee);
             Assert.Equal("SecondName", card.Employee.SecondName);
-
         }
     }
 }

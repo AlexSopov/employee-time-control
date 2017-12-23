@@ -7,9 +7,10 @@ In this repository creating database for motitoring employees work attendance by
 | Project Certification     |[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae3322a00bf1435da90e91e4ed0d06ac)](https://www.codacy.com/app/AlexSopov/employee-time-control?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AlexSopov/employee-time-control&amp;utm_campaign=Badge_Grade)      |
 | Code coverage | [![codecov](https://codecov.io/gh/AlexSopov/employee-time-control/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexSopov/employee-time-control)      |
 
+See more details here: [Raw Report](https://github.com/AlexSopov/employee-time-control/blob/master/Content/Report.docx?raw=true)
 
 ### Database schema
-![Image](https://raw.githubusercontent.com/AlexSopov/employee-time-control/master/Content/Diagram.jpg)
+![Image](https://github.com/AlexSopov/employee-time-control/blob/master/Content/Diagram.jpg?raw=true)
 
 ### Most useful sql queries 
 

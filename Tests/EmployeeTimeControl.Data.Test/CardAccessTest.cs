@@ -10,38 +10,38 @@ namespace EmployeeTimeControl.Data.Test
         [Fact]
         public void CardAccessNavigationPropertiesWork()
         {
-            Card card1 = new Card()
+            Card card1 = new Card
             {
-                Employee = new Employee()
+                Employee = new Employee
                 {
                     FirstName = "FirstName",
                     SecondName = "SecondName",
                     JobTitle = "Job",
-                    VisitingRule = new VisitingRule() { Description = "Description" }
+                    VisitingRule = new VisitingRule { Description = "Description" }
                 }
             };
-            Card card2 = new Card()
+            Card card2 = new Card
             {
-                Employee = new Employee()
+                Employee = new Employee
                 {
                     FirstName = "FirstName2",
                     SecondName = "SecondName2",
                     JobTitle = "Job",
-                    VisitingRule = new VisitingRule() { Description = "Description" }
+                    VisitingRule = new VisitingRule { Description = "Description" }
                 }
             };
-            Card card3 = new Card()
+            Card card3 = new Card
             {
-                Employee = new Employee()
+                Employee = new Employee
                 {
                     FirstName = "FirstName3",
                     SecondName = "SecondName3",
                     JobTitle = "Job",
-                    VisitingRule = new VisitingRule() { Description = "Description" }
+                    VisitingRule = new VisitingRule { Description = "Description" }
                 }
             };
 
-            PassagePoint passagePoint = new PassagePoint() { Address = "Address" };
+            PassagePoint passagePoint = new PassagePoint { Address = "Address" };
 
             Assert.False(CanIntersectPassagePoint(card1, passagePoint));
             Assert.False(CanIntersectPassagePoint(card2, passagePoint));

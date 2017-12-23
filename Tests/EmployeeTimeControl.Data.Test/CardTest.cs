@@ -15,7 +15,7 @@ namespace EmployeeTimeControl.Data.Test
                     FirstName = "FirstName",
                     SecondName = "SecondName",
                     JobTitle = "Job",
-                    VisitingRule = new VisitingRule() { Description = "Description" }
+                    VisitingRule = new VisitingRule { Description = "Description" }
                 },
             };
 

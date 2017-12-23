@@ -7,14 +7,13 @@ namespace EmployeeTimeControl.Data.Test
     public class AccessAttemptionTest : DataTestBase
     {
         [Fact]
-        [assembly: CollectionBehavior(DisableTestParallelization = true)]
         public void AccessAttemptionNavigationPropertiesWork()
         {
-            AccessAttemption accessAttemption = new AccessAttemption()
+            AccessAttemption accessAttemption = new AccessAttemption
             {
-                Card = new Card()
+                Card = new Card
                 {
-                    Employee = new Employee()
+                    Employee = new Employee
                     {
                         FirstName = "FirstName",
                         SecondName = "SecondName",
@@ -22,7 +21,7 @@ namespace EmployeeTimeControl.Data.Test
                         VisitingRule = new VisitingRule() { Description = "Description"}
                     },
                 },
-                PassagePoint = new PassagePoint()
+                PassagePoint = new PassagePoint
                 {
                     Address = "Address"
                 },

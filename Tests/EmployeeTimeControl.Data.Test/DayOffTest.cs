@@ -14,17 +14,17 @@ namespace EmployeeTimeControl.Data.Test
                 FirstName = "FirstName",
                 SecondName = "SecondName",
                 JobTitle = "Job",
-                VisitingRule = new VisitingRule() { Description = "Description" }
+                VisitingRule = new VisitingRule { Description = "Description" }
             };
-            Employee employee2 = new Employee()
+            Employee employee2 = new Employee
             {
                 FirstName = "FirstName2",
                 SecondName = "SecondName2",
                 JobTitle = "Job",
-                VisitingRule = new VisitingRule() { Description = "Description" }
+                VisitingRule = new VisitingRule { Description = "Description" }
             };
 
-            employee1.DayOffs.Add(new DayOff() { DayOffDate = DateTime.Now, DayOffType = DayOffType.SickLeave });
+            employee1.DayOffs.Add(new DayOff { DayOffDate = DateTime.Now, DayOffType = DayOffType.SickLeave });
 
             employeeTimeControlDataContext.EmployeeSet.Add(employee1);
             employeeTimeControlDataContext.EmployeeSet.Add(employee2);

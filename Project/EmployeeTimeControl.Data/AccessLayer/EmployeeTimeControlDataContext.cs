@@ -5,7 +5,7 @@ namespace EmployeeTimeControl.Data.AccessLayer
 {
     public class EmployeeTimeControlDataContext : DbContext
     {
-        public EmployeeTimeControlDataContext(string connectionStringName = "EmployeeTimeControlSystem") : base(connectionStringName)
+        public EmployeeTimeControlDataContext() : base("EmployeeTimeControlSystem")
         {
         }
 

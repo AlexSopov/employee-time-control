@@ -92,10 +92,6 @@
     <Analyzer Include="..\..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Project\EmployeeTimeControl.API\EmployeeTimeControl.API.csproj">
-      <Project>{fd54a41b-c5f3-4853-a75c-65aa1e254b0c}</Project>
-      <Name>EmployeeTimeControl.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Project\EmployeeTimeControl.Data\EmployeeTimeControl.Data.csproj">
       <Project>{74411317-6348-4761-bc3a-4541fcdb3b50}</Project>
       <Name>EmployeeTimeControl.Data</Name>

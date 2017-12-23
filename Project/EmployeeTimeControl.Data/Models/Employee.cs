@@ -17,10 +17,13 @@ namespace EmployeeTimeControl.Data.Models
         public virtual ICollection<Card> Cards { get; set; }
         [JsonIgnore]
         public virtual VisitingRule VisitingRule { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<DayOff> DayOffs { get; set; }
 
         public Employee()
         {
             Cards = new List<Card>();
+            DayOffs = new List<DayOff>();
         }
     }
 }

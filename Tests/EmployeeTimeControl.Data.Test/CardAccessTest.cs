@@ -1,17 +1,13 @@
 ﻿using EmployeeTimeControl.Data.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace EmployeeTimeControl.Data.Test
 {
-    public class CardAccessTest : DataTestBase
+    public class CardPassageAccessTest : DataTestBase
     {
         [Fact]
-        [assembly: CollectionBehavior(DisableTestParallelization = true)]
         public void CardAccessNavigationPropertiesWork()
         {
             Card card1 = new Card()

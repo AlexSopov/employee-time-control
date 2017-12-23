@@ -1,5 +1,3 @@
-services:
-  - mssql2013
 before_build:
  - nuget restore
 build_script:

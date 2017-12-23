@@ -9,7 +9,7 @@ namespace EmployeeTimeControl.Data.Test
         [Fact]
         public void DayOffNavigationPropertiesWork()
         {
-            Employee employee1 = new Employee()
+            Employee employee1 = new Employee
             {
                 FirstName = "FirstName",
                 SecondName = "SecondName",

@@ -8,9 +8,9 @@ namespace EmployeeTimeControl.Data.Test
         [Fact]
         public void CardNavigationPropertiesWork()
         {
-            Card card = new Card()
+            Card card = new Card
             {
-                Employee = new Employee()
+                Employee = new Employee
                 {
                     FirstName = "FirstName",
                     SecondName = "SecondName",

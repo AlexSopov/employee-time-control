@@ -13,19 +13,19 @@ namespace EmployeeTimeControl.Data.Test
         [Fact]
         public void CanStoreEmployee()
         {
-            Employee employee1 = new Employee()
+            Employee employee1 = new Employee
             {
                 FirstName = "FirstName",
                 SecondName = "SecondName",
                 JobTitle = "Job",
-                VisitingRule = new VisitingRule() { Description = "Description" }
+                VisitingRule = new VisitingRule { Description = "Description" }
             };
-            Employee employee2 = new Employee()
+            Employee employee2 = new Employee
             {
                 FirstName = "FirstName2",
                 SecondName = "SecondName2",
                 JobTitle = "Job2",
-                VisitingRule = new VisitingRule() { Description = "Description2" }
+                VisitingRule = new VisitingRule { Description = "Description2" }
             };
 
             employeeTimeControlDataContext.EmployeeSet.Add(employee1);

@@ -10,18 +10,18 @@ namespace EmployeeTimeControl.Data.Test
         [Fact]
         public void DayOffNavigationPropertiesWork()
         {
-            VisitingRule visitingRule = new VisitingRule()
+            VisitingRule visitingRule = new VisitingRule
             {
                 Description = "Two days a week"
             };
-            visitingRule.DayRules.Add(new DayVisitingRule()
+            visitingRule.DayRules.Add(new DayVisitingRule
             {
                 StartWorkingDay = new TimeSpan(10, 0, 0),
                 EndWorkingDay = new TimeSpan(18, 0, 0),
                 DayOfWeek = DayOfWeek.Monday,
                 DayNormal = 8,    
             });
-            visitingRule.DayRules.Add(new DayVisitingRule()
+            visitingRule.DayRules.Add(new DayVisitingRule
             {
                 StartWorkingDay = new TimeSpan(11, 0, 0),
                 EndWorkingDay = new TimeSpan(20, 0, 0),

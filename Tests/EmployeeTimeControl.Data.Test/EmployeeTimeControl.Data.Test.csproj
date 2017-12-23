@@ -84,9 +84,15 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AccessAttemptionTest.cs" />
+    <Compile Include="CardAccessTest.cs" />
+    <Compile Include="CardTest.cs" />
     <Compile Include="DataTestBase.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DayOffTest.cs" />
+    <Compile Include="DayVisitingRuleTest.cs" />
+    <Compile Include="EmployeeTest.cs" />
+    <Compile Include="PassagePointTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisitingRuleTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

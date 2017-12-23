@@ -74,9 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessLayer\DataRepository.cs" />
     <Compile Include="AccessLayer\EmployeeTimeControlDataContext.cs" />
-    <Compile Include="AccessLayer\UnitOfWork.cs" />
     <Compile Include="Migrations\201712221431039_Initial.cs" />
     <Compile Include="Migrations\201712221431039_Initial.Designer.cs">
       <DependentUpon>201712221431039_Initial.cs</DependentUpon>

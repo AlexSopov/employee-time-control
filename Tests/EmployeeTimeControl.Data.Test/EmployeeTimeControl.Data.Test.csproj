@@ -83,6 +83,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AccessAttemptionTest.cs" />
+    <Compile Include="DataTestBase.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

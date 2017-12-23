@@ -9,7 +9,7 @@ namespace EmployeeTimeControl.Data.Test
 
         public DataTestBase()
         {
-            employeeTimeControlDataContext = new EmployeeTimeControlDataContext();
+            employeeTimeControlDataContext = new EmployeeTimeControlDataContext("TestConnection");
             CleanDatabase();
         }
 

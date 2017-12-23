@@ -1,11 +1,11 @@
 services:
   - mssql2014
-  - mssql2008r2sp2
+  - mssql2017
 before_build:
  - nuget restore
 build_script:
  - msbuild EmployeeTimeControl.sln
 test_script:
- - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.3.1\tools\net452\xunit.console.x86.exe" -targetargs:"Tests\EmployeeTimeControl.Data.Test\bin\Debug\EmployeeTimeControl.Data.Test.dll Tests\EmployeeTimeControl.API.Test\bin\Debug\EmployeeTimeControl.API.Test.dll -noshadow" -filter:"-[*Test]" -output:"coverage.xml"
+ - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.3.1\tools\net452\xunit.console.x86.exe" -targetargs:"Tests\EmployeeTimeControl.Data.Test\bin\Debug\EmployeeTimeControl.Data.Test.dll Tests\EmployeeTimeControl.API.Test\bin\Debug\EmployeeTimeControl.API.Test.dll -noshadow" -filter:"-*[*Test]" -output:"coverage.xml"
 after_test:
  - .\packages\Codecov.1.0.3\tools\codecov.exe -f "coverage.xml"

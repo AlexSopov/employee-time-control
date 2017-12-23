@@ -14,7 +14,7 @@ See more details here: [Raw Report](https://github.com/AlexSopov/employee-time-c
 
 ### Most useful sql queries 
 
-History of employee attendance
+History of employee attendance:
 ```sql
 SELECT * 
 FROM AccessAttemptions AS aas 
@@ -24,7 +24,7 @@ WHERE aas.CardId IN
 	 WHERE Cards.EmployeeId = @id);
 ```
 
-Generate list of employees, who comes later than expected
+Generate list of employees, who comes later than expected:
 ```sql
 SELECT empl.EmployeeId, empl.FirstName, empl.SecondName, empl.JobTitle, empl.VisitingRuleId 
 FROM Employees AS empl
@@ -50,7 +50,7 @@ AND NOT aas.AttemptionTime IN
 AND aas.AttemptionTime BETWEEN @from AND @to
 ```
 
-Generate list of employee, who work less than expected
+Generate list of employee, who work less than expected:
 ```sql
 SELECT empl.EmployeeId, empl.FirstName, empl.SecondName, empl.JobTitle, empl.VisitingRuleId 
     FROM Employees AS empl

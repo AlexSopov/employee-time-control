@@ -7,6 +7,7 @@ namespace EmployeeTimeControl.Data.Test
     public class AccessAttemptionTest : DataTestBase
     {
         [Fact]
+        [assembly: CollectionBehavior(DisableTestParallelization = true)]
         public void AccessAttemptionNavigationPropertiesWork()
         {
             AccessAttemption accessAttemption = new AccessAttemption()

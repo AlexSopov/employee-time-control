@@ -23,6 +23,7 @@ namespace EmployeeTimeControl.Data.Test
             employeeTimeControlDataContext.PassagePointSet.RemoveRange(employeeTimeControlDataContext.PassagePointSet);
             employeeTimeControlDataContext.VisitingRuleSet.RemoveRange(employeeTimeControlDataContext.VisitingRuleSet);
             employeeTimeControlDataContext.DayOffSet.RemoveRange(employeeTimeControlDataContext.DayOffSet);
+            employeeTimeControlDataContext.SaveChanges();
         }
 
         #region IDisposable Support

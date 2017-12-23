@@ -11,6 +11,7 @@ namespace EmployeeTimeControl.Data.Test
     public class CardAccessTest : DataTestBase
     {
         [Fact]
+        [assembly: CollectionBehavior(DisableTestParallelization = true)]
         public void CardAccessNavigationPropertiesWork()
         {
             Card card1 = new Card()

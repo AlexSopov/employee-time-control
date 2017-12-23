@@ -1,5 +1,7 @@
+os: Windows Server 2012
 before_build:
  - nuget restore
+ - cmd: "\"C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DAC\\bin\\SqlPackage.exe\" /a:Publish /sf:\"%APPVEYOR_BUILD_FOLDER%\\Database\\SqlServer\\Tracker.dacpac\" /tcs:\"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EmployeeTimeControlSystem;Integrated Security=True\""
 build_script:
  - msbuild EmployeeTimeControl.sln
 test_script:

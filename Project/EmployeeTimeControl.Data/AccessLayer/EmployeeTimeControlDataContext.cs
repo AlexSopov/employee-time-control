@@ -5,9 +5,8 @@ namespace EmployeeTimeControl.Data.AccessLayer
 {
     public class EmployeeTimeControlDataContext : DbContext
     {
-        public EmployeeTimeControlDataContext() : base("EmployeeTimeControlSystem")
+        public EmployeeTimeControlDataContext(string connectionStringName = "EmployeeTimeControlSystem") : base(connectionStringName)
         {
-
         }
 
         public DbSet<AccessAttemption> AccessAttemptionSet { get; set; }

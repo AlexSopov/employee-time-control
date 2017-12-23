@@ -21,7 +21,6 @@ namespace EmployeeTimeControl.API.Controllers
         // GET: api/Employees
         public IQueryable<Employee> GetEmployeeSet()
         {
-
             return db.EmployeeSet;
         }
 
